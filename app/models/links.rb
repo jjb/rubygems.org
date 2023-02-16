@@ -45,6 +45,10 @@ class Links
     end
   end
 
+  def verified?(uri)
+    rubygem.link_verifications.verified.for_uri(uri).any?
+  end
+
   # documentation uri:
   # if metadata has it defined, use that
   # or if linksets has it defined, use that

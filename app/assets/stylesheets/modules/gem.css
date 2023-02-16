@@ -192,6 +192,9 @@
 .gem__link:before {
   margin-right: 16px; }
 
+.gem__link__verified:before {
+  content: "✅"; }
+
 .gem__versions-wrap {
   margin-bottom: 70px;
   overflow: auto; }
