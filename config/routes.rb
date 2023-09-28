@@ -174,7 +174,7 @@ Rails.application.routes.draw do
       end
 
       namespace :oidc do
-        resources :api_key_roles, param: :token, only: %i[index show]
+        resources :api_key_roles, param: :token
       end
     end
     resources :stats, only: :index

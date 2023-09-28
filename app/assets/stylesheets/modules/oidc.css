@@ -1,0 +1,16 @@
+dl.api_key_permissions {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+dl.api_key_permissions dt {
+  font-weight: bold;
+  float: inherit;
+}
+
+dl.oidc_access_policy {
+  display: grid;
+  column-gap: 1rem;
+  grid-template-columns: fit-content(6rem) auto;
+}

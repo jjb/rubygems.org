@@ -6,6 +6,8 @@ class OIDC::ApiKeyRole < ApplicationRecord
     class_name: "OIDC::IdToken", inverse_of: :api_key_role, foreign_key: :oidc_api_key_role_id, dependent: :nullify
   has_many :api_keys, through: :id_tokens, inverse_of: :oidc_api_key_role
 
+  validates :name, presence: true, length: { maximum: 255 }, uniqueness: { scope: :user_id }
+
   attribute :api_key_permissions, Types::JsonDeserializable.new(OIDC::ApiKeyPermissions)
   validates :api_key_permissions, presence: true, nested: true
   validate :gems_belong_to_user
